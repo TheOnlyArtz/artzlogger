@@ -5,7 +5,8 @@ const error   = require('../src/functions/error.js'),
       debug   = require('../src/functions/debug.js'),
       group   = require('../src/functions/group.js'),
       rainbow = require('../src/functions/rainbow.js'),
-      info    = require('../src/functions/info.js')
+      info    = require('../src/functions/info.js'),
+      warn    = require('../src/functions/warn.js')
 
 class Artzlogger {
   constructor() {
@@ -56,6 +57,14 @@ class Artzlogger {
   */
    info(input) {
      info(input);
+  }
+
+  /**
+  *@function
+  *@param {String} input
+  */
+   warn(input) {
+     warn(input);
   }
 
 }
