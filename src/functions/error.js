@@ -1,5 +1,5 @@
   function error (input) {
-    console.log(input.toString());
+    console.log(chalk.red('error') + ":", input.toString());
   }
 
 module.exports = error;

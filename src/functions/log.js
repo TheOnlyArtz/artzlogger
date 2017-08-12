@@ -1,5 +1,5 @@
 function log (input){
-  console.log(input.toString())
+  console.log('log'.gray, input.toString())
 }
 
 module.exports = log;
