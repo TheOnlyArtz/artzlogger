@@ -1,0 +1,30 @@
+{
+  "name": "artzlogger",
+  "version": "0.0.1",
+  "description": "A light and fast logging process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheOnlyArtz/artzlogger.git"
+  },
+  "keywords": [
+    "logger",
+    "custom",
+    "colors",
+    "light",
+    "fast"
+  ],
+  "author": "TheOnlyArtz/AmitKatz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheOnlyArtz/artzlogger/issues"
+  },
+  "homepage": "https://github.com/TheOnlyArtz/artzlogger#readme",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "colors": "^1.1.2"
+  }
+}
