@@ -1,5 +1,6 @@
  chalk = require('chalk')
  colors = require('colors');
+ moment = require('moment')
 const error   = require('../src/functions/error.js'),
       log     = require('../src/functions/log.js'),
       debug   = require('../src/functions/debug.js'),
@@ -9,9 +10,10 @@ const error   = require('../src/functions/error.js'),
       warn    = require('../src/functions/warn.js')
 
 class Artzlogger {
-  constructor() {
+  constructor(options = {}) {
+    global.Ooptions = options
+    console.log(Ooptions.timeStamp)
   }
-
   /**
   *@function
   *@param {String} input
