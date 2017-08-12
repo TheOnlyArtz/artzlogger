@@ -1,6 +1,6 @@
 {
   "name": "artzlogger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A light and fast logging process",
   "main": "index.js",
   "scripts": {
