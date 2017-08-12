@@ -12,7 +12,6 @@ const error   = require('../src/functions/error.js'),
 class Artzlogger {
   constructor(options = {}) {
     global.Ooptions = options
-    console.log(Ooptions.timeStamp)
   }
   /**
   *@function
