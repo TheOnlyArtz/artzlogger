@@ -1,6 +1,6 @@
 const Class = require('./classes/artzLogger');
 const logger = new Class({
-  timeStamp: moment(new Date).format('DD/MM/YYYY')
+  timeStamp: moment(new Date).format('DD/MM/YYYY hh:mm:ss')
 })
-logger.error('lol')
+logger.debug('lol')
 module.exports = Class;
