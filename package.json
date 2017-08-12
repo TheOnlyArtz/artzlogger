@@ -25,6 +25,7 @@
   "homepage": "https://github.com/TheOnlyArtz/artzlogger#readme",
   "dependencies": {
     "chalk": "^2.1.0",
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "moment": "^2.18.1"
   }
 }

@@ -1,5 +1,6 @@
  chalk = require('chalk')
  colors = require('colors');
+ moment = require('moment')
 const error   = require('../src/functions/error.js'),
       log     = require('../src/functions/log.js'),
       debug   = require('../src/functions/debug.js'),
@@ -9,7 +10,13 @@ const error   = require('../src/functions/error.js'),
       warn    = require('../src/functions/warn.js')
 
 class Artzlogger {
-  constructor() {
+  constructor(options) {
+    this.options = options;
+    if (options && this.options.timeStamp) {
+      console.log('Timestamp valid');
+      let inside;
+      this.input = this.options.timeStamp + inside;
+    }
   }
 
   /**
@@ -17,7 +24,7 @@ class Artzlogger {
   *@param {String} input
   */
   error(input) {
-    error(input)
+    error(this.options.timeStamp + ` ${input}`)
   }
   /**
   *@function
