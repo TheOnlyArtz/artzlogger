@@ -1,15 +1,42 @@
 {
-  "name": "artzlogger",
-  "version": "0.0.3",
+  "_from": "artzlogger@0.0.3",
+  "_id": "artzlogger@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-UrRle9AyCZF/fiH+08zO1x6FLw0JOuCmhnHrFQKOFgVrNkdFxaFx2CeTaZKCaN8BWm1JV/y4QS1MoZhsXsV8wg==",
+  "_location": "/artzlogger",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "artzlogger@0.0.3",
+    "name": "artzlogger",
+    "escapedName": "artzlogger",
+    "rawSpec": "0.0.3",
+    "saveSpec": null,
+    "fetchSpec": "0.0.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/artzlogger/-/artzlogger-0.0.3.tgz",
+  "_shasum": "011f9b4aad26511e56e258698c527eda04cd0d8d",
+  "_spec": "artzlogger@0.0.3",
+  "_where": "C:\\Users\\win10\\Desktop\\artzFetch",
+  "author": {
+    "name": "TheOnlyArtz/AmitKatz"
+  },
+  "bugs": {
+    "url": "https://github.com/TheOnlyArtz/artzlogger/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "colors": "^1.1.2"
+  },
+  "deprecated": false,
   "description": "A light and fast logging process",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheOnlyArtz/artzlogger.git"
-  },
+  "homepage": "https://github.com/TheOnlyArtz/artzlogger#readme",
   "keywords": [
     "logger",
     "custom",
@@ -17,14 +44,15 @@
     "light",
     "fast"
   ],
-  "author": "TheOnlyArtz/AmitKatz",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TheOnlyArtz/artzlogger/issues"
+  "main": "index.js",
+  "name": "artzlogger",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheOnlyArtz/artzlogger.git"
   },
-  "homepage": "https://github.com/TheOnlyArtz/artzlogger#readme",
-  "dependencies": {
-    "chalk": "^2.1.0",
-    "colors": "^1.1.2"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.4"
 }

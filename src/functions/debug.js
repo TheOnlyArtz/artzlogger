@@ -1,9 +1,5 @@
-function debug (input) {
-  if (Ooptions && Ooptions.timeStamp) {
-    console.log(Ooptions.timeStamp + ' ' + 'debug'.cyan + ":", input.toString());
-  } else {
-    console.log('debug'.cyan + ":", input.toString());
-  }
+function debug (func, input) {
+    console.log(func + ' ' + 'debug'.cyan + ":", input.toString());
 }
 
 module.exports = debug;
