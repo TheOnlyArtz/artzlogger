@@ -1,31 +1,31 @@
  chalk = require('chalk')
  colors = require('colors');
  moment = require('moment')
-const error   = require('../src/functions/error.js'),
-      log     = require('../src/functions/log.js'),
-      debug   = require('../src/functions/debug.js'),
-      group   = require('../src/functions/group.js'),
-      rainbow = require('../src/functions/rainbow.js'),
-      info    = require('../src/functions/info.js'),
-      warn    = require('../src/functions/warn.js')
+const error   = require('../functions/error.js'),
+      log     = require('../functions/log.js'),
+      debug   = require('../functions/debug.js'),
+      group   = require('../functions/group.js'),
+      rainbow = require('../functions/rainbow.js'),
+      info    = require('../functions/info.js'),
+      warn    = require('../functions/warn.js')
 
 class Artzlogger {
-  constructor(timestamp) {
-    this.options = timestamp
+  constructor(options = {}) {
+    this.options = options;
   }
   /**
   *@function
   *@param {String} input
   */
   error(...input) {
-    error(getTime(), ...input)
+    error(this.getTime(), ...input)
   }
   /**
   *@function
   *@param {String} input
   */
   log(...input) {
-    log(getTime(), ...input)
+    log(this.getTime(), ...input)
   }
 
   /**
@@ -33,7 +33,7 @@ class Artzlogger {
   *@param {String} input
   */
   group(...input) {
-    group(getTime(), ...input)
+    group(this.getTime(), ...input)
   }
 
   /**
@@ -41,7 +41,7 @@ class Artzlogger {
   *@param {String} input
   */
   debug(...input) {
-    debug(getTime(), ...input)
+    debug(this.getTime(), ...input)
   }
 
   /**
@@ -49,7 +49,7 @@ class Artzlogger {
   *@param {String} input
   */
   rainbow(...input) {
-    rainbow(getTime(), ...input)
+    rainbow(this.getTime(), ...input)
   }
 
   /**
@@ -57,7 +57,7 @@ class Artzlogger {
   *@param {String} input
   */
   info(...input) {
-    info(getTime(), ...input)
+    info(this.getTime(), ...input)
   }
 
   /**
@@ -65,12 +65,14 @@ class Artzlogger {
   *@param {String} input
   */
   warn(...input) {
-    warn(getTime(), ...input)
+    warn(this.getTime(), ...input)
   }
 
+  getTime() {
+    return this.options.timestamp ? this.options.timestamp() || '' : '';
+  }
 }
 
-function getTime() {
-  return(moment(new Date).format('hh:mm:ss a'))
-}
+
+
 module.exports = Artzlogger;

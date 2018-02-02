@@ -1,3 +1,3 @@
-const Class = require('./classes/artzLogger');
+const Class = require('./src/classes/artzLogger');
 
 module.exports = Class;
