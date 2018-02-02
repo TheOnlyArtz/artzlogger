@@ -1,5 +1,5 @@
 # artzlogger
-A simple custom logging module
+A simple custom logging modlie
 
 ### Custom timestamp driver
 ```js
@@ -17,12 +17,12 @@ const logger = new artzlogger({
 });
 ```
 ### Loggin' methods
-<li>
-  <ul>error</ul>
-  <ul>debug</ul>
-  <ul>group</ul>
-  <ul>info</ul>
-  <ul>log</ul>
-  <ul>rainbow</ul>
-  <ul>warn</ul>
-</li>
+<ul>
+  <li>error</li>
+  <li>debug</li>
+  <li>group</li>
+  <li>info</li>
+  <li>log</li>
+  <li>rainbow</li>
+  <li>warn</li>
+</ul>
