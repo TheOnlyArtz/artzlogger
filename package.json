@@ -32,10 +32,12 @@
   "bundleDependencies": false,
   "dependencies": {
     "chalk": "^2.1.0",
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "moment": "^2.20.1",
+    "mz": "^2.7.0"
   },
   "deprecated": false,
-  "description": "A light and fast logging process",
+  "description": "A cool logging process",
   "homepage": "https://github.com/TheOnlyArtz/artzlogger#readme",
   "keywords": [
     "logger",
@@ -54,5 +56,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.5"
+  "version": "0.0.8"
 }
