@@ -10,4 +10,4 @@ const logger = new l({
 });
 
 logger.info('Hello');
-logger.error('Error happened.')
+logger.error('Error happened.');
