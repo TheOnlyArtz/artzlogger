@@ -1,12 +1,7 @@
 chalk = require('chalk');
 colors = require('colors');
-const error   = require('../functions/error.js'),
-      log     = require('../functions/log.js'),
-      debug   = require('../functions/debug.js'),
-      group   = require('../functions/group.js'),
-      rainbow = require('../functions/rainbow.js'),
-      info    = require('../functions/info.js'),
-      warn    = require('../functions/warn.js');
+
+const assignMethod = require('../functions/methods.js');
 
 let streamToJSON = require('../functions/streamToJSON.js');
 let streamToTXT = require('../functions/streamToTXT.js');
@@ -20,8 +15,7 @@ class Artzlogger {
     this.path = this.options.streamLog && this.options.streamLog.path ? this.options.streamLog.path : './';  
     
     if (!this.options.streamLog || !this.options.streamLog.enabled) {
-        streamToJSON = function() {};
-        streamToTXT = function() {};
+        stream = function() {}
     }
       
     if (this.options.streamLog && !this.options.streamLog.encode) stream = streamToTXT;
@@ -41,7 +35,7 @@ class Artzlogger {
   *@param {String} input
   */
   error(...input) {
-    error(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'error', ...input, this);
     stream(this.getTime(), 'error', ...input, this.path);
   }
   /**
@@ -49,7 +43,7 @@ class Artzlogger {
   *@param {String} input
   */
   log(...input) {
-    log(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'log', ...input, this);
     stream(this.getTime(), 'log', ...input, this.path);
   }
 
@@ -58,7 +52,7 @@ class Artzlogger {
   *@param {String} input
   */
   group(...input) {
-    group(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'group', ...input, this);
     stream(this.getTime(), 'group', ...input, this.path);
   }
 
@@ -67,7 +61,7 @@ class Artzlogger {
   *@param {String} input
   */
   debug(...input) {
-    debug(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'debug', ...input, this);
     stream(this.getTime(), 'debug', ...input, this.path);
   }
 
@@ -76,7 +70,7 @@ class Artzlogger {
   *@param {String} input
   */
   rainbow(...input) {
-    rainbow(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'rainbow', ...input, this);
     stream(this.getTime(), 'rainbow', ...input, this.path);
   }
 
@@ -85,7 +79,7 @@ class Artzlogger {
   *@param {String} input
   */
   info(...input) {
-    info(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'info', ...input, this);
     stream(this.getTime(), 'info', ...input, this.path);
   }
 
@@ -94,7 +88,7 @@ class Artzlogger {
   *@param {String} input
   */
   warn(...input) {
-    warn(this.getTime(), ...input);
+    assignMethod(this.getTime(), 'warn', ...input, this);
     stream(this.getTime(), 'warn', ...input, this.path);
   }
 

@@ -8,7 +8,7 @@ function streamToJSON(timestamp, type, message, path) {
      }   
     
         const title = path ? path + `[Artzlogger]${this.timestamp}.json` : `./[Artzlogger]${this.timestamp}.json`;
-        console.log(title)
+
         const fileThere = fs.existsSync(title);
         if (!fileThere) {
              fs.writeFileSync(title, JSON.stringify({}));
