@@ -28,7 +28,37 @@ const logger = new artzlogger({
   }
 });
 ```
+### Advanced Config
+##### Capitalized log method name
+```js
+const artzlogger = require('artzlogger');
+const logger = new artzlogger({
+    capitalized: true
+});
 
+logger.error('Error!!!') // -> ERROR: Error!!!
+```
+##### Method Name Decorators
+```js
+const artzlogger = require('artzlogger');
+const logger = new artzlogger({
+    decorators: {
+        start: "⚠️",
+        end: "⚠️"
+    }
+});
+
+logger.error('Error!!!') // -> ⚠️error⚠️: Error!!!
+```
+##### Escaped Output
+```js
+const artzlogger = require('artzlogger');
+const logger = new artzlogger({
+  escapedOutput: true,
+});
+
+logger.error({s: "s"} + ' ' + 'Has failed') // -> error: [Object: object] Has failed
+```
 ### Loggin' methods
 <ul>
   <li>error</li>
