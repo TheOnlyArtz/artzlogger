@@ -31,7 +31,7 @@ class Artzlogger {
 
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   error(...input) {
     assignMethod(this.getTime(), 'error', ...input, this);
@@ -39,7 +39,7 @@ class Artzlogger {
   }
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   log(...input) {
     assignMethod(this.getTime(), 'log', ...input, this);
@@ -48,7 +48,7 @@ class Artzlogger {
 
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   group(...input) {
     assignMethod(this.getTime(), 'group', ...input, this);
@@ -57,7 +57,7 @@ class Artzlogger {
 
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   debug(...input) {
     assignMethod(this.getTime(), 'debug', ...input, this);
@@ -66,7 +66,7 @@ class Artzlogger {
 
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   rainbow(...input) {
     assignMethod(this.getTime(), 'rainbow', ...input, this);
@@ -75,7 +75,7 @@ class Artzlogger {
 
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   info(...input) {
     assignMethod(this.getTime(), 'info', ...input, this);
@@ -84,7 +84,7 @@ class Artzlogger {
 
   /**
   *@function
-  *@param {String} input
+  *@param {String} input the input
   */
   warn(...input) {
     assignMethod(this.getTime(), 'warn', ...input, this);
