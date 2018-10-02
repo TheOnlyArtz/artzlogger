@@ -9,26 +9,26 @@ let stream;
 class Artzlogger {
   constructor(options = {}) {
     this.options = options;
-     
-    
-    this.path = this.options.streamLog && this.options.streamLog.path ? this.options.streamLog.path : './';  
-    
+
+
+    this.path = this.options.streamLog && this.options.streamLog.path ? this.options.streamLog.path : './';
+
     if (!this.options.streamLog || !this.options.streamLog.enabled) {
-        stream = function() {}
+        stream = () => {}
     }
-      
+
     if (this.options.streamLog && !this.options.streamLog.encode) stream = streamToTXT;
     if (this.options.streamLog && this.options.streamLog.encode === 'JSON' && streamToJSON) {
         stream = streamToJSON;
     }
-      
+
     if (this.options.streamLog && this.options.streamLog.encode === 'TXT' && streamToTXT) {
-        stream = streamToTXT;   
+        stream = streamToTXT;
     }
-    
+
   }
-    
-  
+
+
   /**
   *@function
   *@param {String} input
