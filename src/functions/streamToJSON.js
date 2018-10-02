@@ -29,10 +29,6 @@ function streamToJSON(timestamp, type, message, path) {
             }      
         }
         
-        
- 
-
-        
         fs.writeFileSync(title, JSON.stringify(streamableJSON, null, 2));
     
 }

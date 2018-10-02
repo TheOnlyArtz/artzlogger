@@ -31,7 +31,6 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "chalk": "^2.1.0",
     "colors": "^1.1.2",
     "moment": "^2.20.1",
     "mz": "^2.7.0"
@@ -56,5 +55,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.11"
+  "version": "0.0.12"
 }
