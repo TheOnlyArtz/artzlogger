@@ -91,6 +91,7 @@ class Artzlogger {
     stream(this.getTime(), 'warn', ...input, this.path);
   }
 
+  // This function will fetch the time from the user's config!
   getTime() {
     return this.options.timestamp ? this.options.timestamp() || '' : '';
   }
