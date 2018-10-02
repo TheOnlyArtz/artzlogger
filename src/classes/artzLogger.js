@@ -1,4 +1,3 @@
-chalk = require('chalk');
 colors = require('colors');
 
 const assignMethod = require('../functions/methods.js');
