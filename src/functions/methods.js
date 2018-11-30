@@ -37,6 +37,9 @@ function log(getTimestamp, method, input, logger) {
         case "warn":
             console.log(getLogString('yellow'));
             break;
+        case "tosca":
+            console.log(getLogString('tosca'));
+            break;
     }
            
 }

@@ -20,7 +20,8 @@ logger.error('Error!');
 logger.warn('Warn!');
 logger.info('Info!');
 logger.rainbow('Rainbow!');
-logger.debug('Debug!')
+logger.debug('Debug!');
+logger.tosca('Tosca!');
 
 setTimeout(() => {
   logger.info('1 Sec later so it wont share the same timestamp.');
