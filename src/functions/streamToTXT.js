@@ -9,11 +9,12 @@ function streamToTXT(timestamp, type, message, path) {
 
      const title = path ? path + `[Artzlogger]${this.timestamp}.txt` : `./[Artzlogger]${this.timestamp}.txt`;
      const fileThere = fs.existsSync(title);
+     
      if (!fileThere) {
          fs.writeFileSync(title, '');
      }
-    const streamable = fs.readFileSync(title, 'utf8');
 
+    const streamable = fs.readFileSync(title, 'utf8');
     const string = `${streamable}\r\n[${timestamp} | ${type}] ${message}`
 
     fs.writeFileSync(title, string);
